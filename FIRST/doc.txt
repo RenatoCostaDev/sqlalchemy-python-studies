@@ -1,0 +1,23 @@
+pip install SQLAlchemy
+pip install PyMySQL
+pip install cryptography
+
+------------------------------------------
+1º parte
+
+from sqlalchemy import create_engine, text
+
+engine = create_engine("mysql+pymysql://root:1234@localhost:3306/cinema").connect()
+query = 'SELECT * FROM cinema.filmes;'
+response = engine.execute(text(query)
+conn = engine.connect()
+
+query = 'SELECT * FROM cinema.filmes;'
+response = conn.execute(text(query)
+
+for row in response:
+    print(row)
+    print(row.titulo
+
+print(engine)
+-----------------------------------------
